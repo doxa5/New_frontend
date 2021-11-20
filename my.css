@@ -1,0 +1,194 @@
+body{
+	background-color: hsl(240, 78%, 98%);
+	color: hsl(232, 13%, 33%);
+	margin: 0;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Montserrat, sans-serif;
+	font-weight: 700;
+	min-height: 100vh;
+}
+
+body::before{
+	content: '';
+	background-image: url("images/bg-top.svg");
+	background-repeat: no-repeat;
+    background-position: top right, bottom left;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+body::after{
+	content: '';
+	background-image: url("images/bg-bottom.svg");
+	background-repeat: no-repeat;
+    background-position: bottom left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+/* The switch - the box around the slider */
+.switch {
+ 	position: relative;
+ 	display: inline-block;
+ 	width: 60px;
+ 	height: 34px;
+}
+.title{
+	color: hsl(232, 13%, 33%);
+	text-align: center;
+	margin-top: 2em;
+}
+.head{
+	text-align: center;
+	margin: 2em 0 2em 1em;
+}
+.one{
+	position: relative;
+	left: -3%;
+	color: hsl(234, 14%, 74%);
+}
+.two{
+	position: relative;
+	left: 150%;
+	color: hsl(234, 14%, 74%);
+}
+.slide{
+	position: absolute;
+	left: 200%;
+}
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+ 	width: 0;
+ 	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: slateblue;
+	background-image: linear-gradient(to right,hsl(236, 72%, 79%), hsl(237, 63%, 64%) );
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	transition: .4s;
+}
+
+input:checked + .slider {
+	background-color: #2196F3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+ 
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+.flex{
+	margin: auto;
+	max-width: 100%;
+	width: 1200%;
+}
+.container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+.item{
+	background-color: white;
+	border-radius: 20px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+	color: hsl(233, 13%, 49%);
+	padding: 30px;
+	margin: 10px;
+	text-align: center;
+	width: 19%;
+}
+#second-box{
+	background-image: linear-gradient(to bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+	color: white;
+	transform: scale(1.15);
+	margin-top: 5px;
+}
+#second-box > * {
+	transform: scale(0.869);
+}
+#second-box button{
+	background-image: none;
+	background-color: white;
+	color: hsl(237, 63%, 64%);
+}
+#second-box ul,
+#second-box ul li{
+	border-color: white;
+}
+.item h4{
+	text-align: center;
+	margin-top: 0em;
+}
+.item p{
+	font-size: 3em;
+	margin-top: 0;
+}
+.item ul {
+	border-top: 1px solid hsl(123, 14%, 74%);
+	padding: 0;
+	list-style-type: none;
+}
+.item ul li{
+	border-bottom: 1px solid hsl(123, 14%, 74%);
+	padding: 15px 0;
+}
+.item button{
+	background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+	color: white;
+	width: 100%;
+	padding: 10px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+.attribution{ 
+	margin-top: 53px;
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a { 
+	color: hsl(228, 45%, 44%);
+}
